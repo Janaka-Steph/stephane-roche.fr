@@ -1,0 +1,16 @@
+{
+  "name": "stephanreroche/stephane-roche.fr",
+  "homepage": "http://www.stephane-roche.fr",
+  "license": "MIT",
+  "require": {
+    "smarty/smarty": "^3.1",
+    "mikey179/vfsStream": "^1.6",
+    "php": "^5.5"
+  },
+  "authors": [
+    {
+      "name": "Stephane Roche",
+      "email": "stephane.roche@anaplan.com"
+    }
+  ]
+}

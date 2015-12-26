@@ -1,0 +1,23 @@
+{
+  "name": "stephane-roche.fr",
+  "version": "2.0.0",
+  "description": "site perso",
+  "main": "Gruntfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@bitbucket.org:Janaka-Steph/stephane-roche.fr.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {},
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-autoprefixer": "^2.0.0",
+    "grunt-contrib-cssmin": "^0.10.0",
+    "grunt-contrib-watch": "^0.6.1",
+    "grunt-sass": "^0.17"
+  }
+}

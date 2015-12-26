@@ -1,0 +1,44 @@
+#<IfModule mod_rewrite.c>
+
+# Empeche la visualisation de l'arborescence, n'a rien a voir avec le masquage du « index.php ».
+Options -Indexes
+
+ 
+RewriteEngine On
+#RewriteBase /
+
+SetEnvIf Host www.stephane-roche.fr$ CI_ENV=production
+SetEnvIf Host localhost$ CI_ENV=development
+
+
+#
+# Fixe les regles de reecriture d'URL. Ici, nous utilisons une liste blanche.
+#
+
+
+# Toutes les URL qui ne correspondent pas a ces masques sont reecrites.
+#RewriteCond $1 !^(index\.php|assets/|robots\.txt|favicon\.ico|apple-touch-icon\.png|mstile-70x70\.png)
+RewriteCond $1 !^(index\.php|assets/|bower_components/|robots\.txt)
+#RewriteCond $1 !^(index\.php|robots\.txt)
+
+
+
+# Toutes les autres URL vont etre redirigees vers le fichier index.php.
+RewriteRule ^(.*)$ index.php?/$1 [L]
+
+
+# Autre exemple htaccess
+#
+#RewriteEngine On
+#RewriteBase /
+#RewriteCond %{REQUEST_URI} ^system.*
+#RewriteRule ^(.*)$ /index.php?/$1 [L]
+#RewriteCond %{REQUEST_URI} ^application.*
+#RewriteRule ^(.*)$ /index.php?/$1 [L]
+#RewriteCond %{REQUEST_FILENAME} !-f
+#RewriteCond %{REQUEST_FILENAME} !-d
+#RewriteRule ^(.*)$ index.php?/$1 [L]
+
+
+#</IfModule>
+
