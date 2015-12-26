@@ -87,28 +87,7 @@ function initCustom() {
 			countdown();
 		});
 	} 
-	
-	/* Sticky footer */
-	//$(document).ready( function() {
-/*
- $(window).bind("load", function () {
-    var footer = $("#footer-page");
-    var pos = footer.position();
-    var height = $(window).height();
-    console.log(height);
-    height = height - pos.top;
 
-    //height = height - footer.height(); // ca enleve trop de hauteur
-
-    if (height > 0) {
-        footer.css({
-            'margin-top': height + 'px'
-        });
-    }
-});
-*/
-	//});
-	
 	
 	// Menu Marker
 	// Init - Marker on first menu item
@@ -184,11 +163,5 @@ function initCustom() {
 	$('.right-off-canvas-toggleLink').click(function(e) {
 		$('.right-off-canvas-toggleLink').parents('.off-canvas-wrap').toggleClass("move-left");
     });
-
-
-	// Search
-	$.get(locationOrigin + '/blog/search/bitcoin', function(res) {
-		console.log('RESULTAT AJAX', res);
-	})
 }
 window.onload = initCustom;

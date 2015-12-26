@@ -61,11 +61,11 @@ function breadcrumbs(urlController) {
             $(".breadcrumbs").remove();
             $("#breadcrumbs").append(bcContact);
             break;
-            
+
         case "admin":
             $(".breadcrumbs").remove();
             $("#breadcrumbs").append(bcAdmin);
-            break;    
+            break;
 
         default:
             $(".breadcrumbs").remove();
@@ -74,9 +74,9 @@ function breadcrumbs(urlController) {
 
 }
 
-var ajaxrequest = function(idTrigger, idViewContainer, urlController, sendMethod) {
-    $(document).ready(function() {
-        $(idTrigger).click(function(e) {
+var ajaxrequest = function (idTrigger, idViewContainer, urlController, sendMethod) {
+    $(document).ready(function () {
+        $(idTrigger).click(function (e) {
             //if (event.defaultPrevented) return;
             e.preventDefault();
             e.stopPropagation();
@@ -84,7 +84,7 @@ var ajaxrequest = function(idTrigger, idViewContainer, urlController, sendMethod
                 //url: window.location.origin+"/stephane-roche.fr/"+urlController,
                 url: locationOrigin + urlController,
                 type: sendMethod,
-                success: function(data, statut, jqXHR) {
+                success: function (data, statut, jqXHR) {
                     //console.log(locationOrigin);
                     //console.log("window.location :");console.log(window.location);
                     //console.log("window.location.origin :");console.log(window.location.origin);
@@ -96,29 +96,30 @@ var ajaxrequest = function(idTrigger, idViewContainer, urlController, sendMethod
                     $(idViewContainer).wrap("<div id='content' class='row small-10'></div>");
                     $('html, body').animate({scrollTop: 0}, 0);
                 },
-                error: function(jqXHR, statut, erreur) {
+                error: function (jqXHR, statut, erreur) {
                     alert("Sorry bro, an error occurs");
                 },
                 statusCode: {
-                    404: function() {
+                    404: function () {
                         alert("page not found");
                     },
-                    400: function() {
+                    400: function () {
                         alert('bad request');
                     }
                 }
             });
             history.pushState({
-                idTrigger: idTrigger,
-                idViewContainer: idViewContainer,
-                urlController: locationOrigin + urlController,
-                sendMethod: sendMethod},
-            'titre', locationOrigin + urlController);
+                    idTrigger: idTrigger,
+                    idViewContainer: idViewContainer,
+                    urlController: locationOrigin + urlController,
+                    sendMethod: sendMethod
+                },
+                'titre', locationOrigin + urlController);
         });
     });
 };
 
-window.onpopstate = function(event) {
+window.onpopstate = function (event) {
     //console.log(event.state.idTrigger);
     //console.log(event.state.idViewContainer);
     //console.log("event.state.urlController :");
@@ -127,52 +128,46 @@ window.onpopstate = function(event) {
     $.ajax({
         url: event.state.urlController,
         type: event.state.sendMethod,
-        success: function(data, statut, jqXHR) {
-            /*if(event.state === null){
-             $("#content").remove();
-             $(data).hide().insertAfter(".breadcrumbs").fadeIn(500);
-             $("#home-container").wrap("<div id='content' class='row small-9'></div>");
-             
-             }else{*/
+        success: function (data, statut, jqXHR) {
             $("#content").remove();
             $(data).hide().insertAfter(".breadcrumbs").fadeIn(500);
-            $(event.state.idViewContainer).wrap("<div id='content' class='row small-10'></div>"); /*}*/
+            $(event.state.idViewContainer).wrap("<div id='content' class='row small-10'></div>");
         },
-        error: function(jqXHR, statut, erreur) {
+        error: function (jqXHR, statut, erreur) {
             alert("Sorry bro, an error occurs");
         },
         statusCode: {
-            404: function() {
+            404: function () {
                 alert("page not found");
             },
-            400: function() {
+            400: function () {
                 alert('bad request');
             }
         }
     });
-    
+
     //ajaxrequest(event.state.idTrigger,event.state.idViewContainer,event.state.urlController,event.state.sendMethod);	
     // Set properties dynamically to the marker when user use back and forward navigation browser
     var ele = event.state.idTrigger;
-    
-    // Hack Marker Ajax menu - Remplace les classes par les id pour que la fonction css() de jquery fonctionne
+
+    // Hack Marker Ajax menu - Replace classes by id in order to jquery css() function to work
     switch (ele) {
-		case ".ajaxAcceuil":
+        case ".ajaxAcceuil":
             ele = '#accueil-menu';
-			break;
-		case ".ajaxBlog":
+            break;
+        case ".ajaxBlog":
             ele = '#blog-menu';
-			break;
+            break;
         case ".ajaxRealisations":
             ele = '#realisations-menu';
             break;
-		case ".ajaxCurriculum":
+        case ".ajaxCurriculum":
             ele = '#curriculum-menu';
             break;
         case ".ajaxContact":
             ele = '#contact-menu';
             break;
-       default:
+        default:
             ele = '#accueil-menu';
     }
 
@@ -205,8 +200,7 @@ ajaxrequest(".ajaxContact", "#contact-container", "contact", "GET");
 ajaxrequest(".ajaxAdmin", "#admin-container", "auth/index", "GET");
 
 // Call Article - Suite button
-$(document).on('click', '.suitelink', function(e) {
-//$(".suitelink").click(function(e) {
+$(document).on('click', '.suitelink', function (e) {
     e.preventDefault();
     var href_article = $(this).attr('href');
     //console.log(href_article);
@@ -214,24 +208,29 @@ $(document).on('click', '.suitelink', function(e) {
     $.ajax({
         url: locationOrigin + href_article,
         type: "POST",
-        success: function(data, statut, jqXHR) {
+        success: function (data, statut, jqXHR) {
             $("#content").remove();
             $(data).hide().insertAfter("#breadcrumbs").fadeIn(500);
             $("#article-container").wrap("<div id='content' class='row small-10'></div>");
             $('html, body').animate({scrollTop: 0}, 0);
         },
-        error: function(jqXHR, statut, erreur) {
+        error: function (jqXHR, statut, erreur) {
             alert("Sorry bro, an error occurs");
         },
         statusCode: {
-            404: function() {
+            404: function () {
                 alert("page not found");
             },
-            400: function() {
+            400: function () {
                 alert('bad request');
             }
         }
     });
 
-    history.pushState({idTrigger: ".suitelink", idViewContainer: "article-container", urlController: href_article, sendMethod: "POST"}, 'titre', locationOrigin + href_article);
+    history.pushState({
+        idTrigger: ".suitelink",
+        idViewContainer: "article-container",
+        urlController: href_article,
+        sendMethod: "POST"
+    }, 'titre', locationOrigin + href_article);
 });
