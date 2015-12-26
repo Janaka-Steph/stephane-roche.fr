@@ -1,139 +1,11 @@
 <div class="" id="cv-container">
     <div id="competencesWeb">
-        <h1>Mes principaux outils pour le développement web</h1>
-
-        <h2>
-            <small>Intégration Front-end et graphisme</small>
-        </h2>
-        <ul>
-            <li>Intégration
-                <ul>
-                    <li>Javascript (ES 5 + ES 6)</li>
-                    <li>React (en train de se former)</li>
-                    <li>Angular</li>
-                    <li>Jquery</li>
-                    <li>Three.js (animation 3D "simple")</li>
-                    <li>Langage de balisage
-                        <ul>
-                            <li>HTML</li>
-                            <li>Markdown</li>
-                            <li>JSTL</li>
-                            <li>JSX</li>
-                        </ul>
-                    </li>
-                    <li>CSS</li>
-                    <li>Préprocesseurs CSS
-                        <ul>
-                            <li>Stylus + Nib</li>
-                            <li>Sass + Compass</li>
-                            <li>Less</li>
-                        </ul>
-                    </li>
-                    <li>Frameworks CSS
-                        <ul>
-                            <li>Foundation</li>
-                            <li>Bootstrap</li>
-                        </ul>
-                    </li>
-                    <li>Moteurs de template JS
-                        <ul>
-                            <li>EJS</li>
-                            <li>Swig</li>
-                            <li>Handlebars</li>
-                        </ul>
-                    </li>
-                    <li>Moteur de template PHP
-                        <ul>
-                            <li>Smarty</li>
-                            <li>Twig</li>
-                        </ul>
-                    </li>
-                </ul>
-            </li>
-            <li>Conception graphique
-                <ul>
-                    <li>Bases de Photoshop</li>
-                    <li>Bases de Illustrator</li>
-                </ul>
-            </li>
-        </ul>
-
-
-        <h2>
-            <small>Back-end</small>
-        </h2>
-        <ul>
-            <li>Langage Javascript
-                <ul>
-                    <li>Node + Express</li>
-                    <li>Middlewares..</li>
-                    <li>Ajax</li>
-                </ul>
-            </li>
-            <li>Langage PHP
-                <ul>
-                    <li>Framework PHP : CodeIgniter</li>
-                </ul>
-            </li>
-            <li>Bases de Java</li>
-            <li>Bases de Ruby</li>
-            <li>Bases de C</li>
-        </ul>
-
-        <h2>
-            <small>Système de gestion de base de données</small>
-        </h2>
-        <ul>
-            <li>MongoDB</li>
-            <li>MySQL</li>
-        </ul>
-
-        <h2>
-            <small>Content Management Systems  /  Plateformes diverses</small>
-        </h2>
-        <ul>
-            <li>Wordpress</li>
-            <li>Ghost (plateforme de blog)</li>
-            <li>NodeBB (plateforme de forum)</li>
-        </ul>
-
-        <h2>
-            <small>Autres</small>
-        </h2>
-        <ul>
-            <li>Administration de serveur (J'héberge mes sites full JS sur un VPS)
-                <ul>
-                    <li>Nginx</li>
-                    <li>Apache</li>
-                </ul>
-            </li>
-            <li>Version Control System
-                <ul>
-                    <li>Git</li>
-                    <ul>
-                        <li>Github – <a href="https://github.com/Janaka-Steph" target="_blank">Suivez moi !</a></li>
-                        <li>Bitbucket</li>
-                    </ul>
-                </ul>
-            </li>
-            <li>Automatisation de tâches
-                <ul>
-                    <li>Webpack</li>
-                    <li>Gulp</li>
-                    <li>Grunt</li>
-                </ul>
-            </li>
-            <li>Package managers
-                <ul>
-                    <li>NPM</li>
-                    <li>Bower</li>
-                    <li>Composer</li>
-                </ul>
-            </li>
-            <li>WebStorm / PHPStorm</li>
-            <li>Emmet</li>
-            <li>Etc...</li>
-        </ul>
+        <p>
+            Je suis spécialisé dans le langage Javascript. J'ai débuté avec JQuery et Angular 1. En septembre 2015 j'ai
+            commencé à travailler avec React et son écosystème. Je me suis aussi amusé à la 3D avec Three.js (voir <a
+                href="http://www.domi-leblog.fr" target="_blank">le blog de Domi</a>).
+            Et bien entendu Node.js pour le back.
+        </p>
     </div>
 
     <div class="row" id="cvCadre">
@@ -144,9 +16,18 @@
 
                 <table role="grid">
                     <tr>
+                        <th>Septembre 2015</th>
+                        <td>
+                            <span class="block">Certificat professionnel de Développeur web - CNAM</span>
+                        </td>
+                    </tr>
+                    <tr>
                         <th>2013-2015</th>
-                        <td><span class="block">Certificat professionnel de Développeur web - CNAM</span>
-                        Formation autodidacte : Livres (en anglais), Google, StackOverflow, Comptes Github, Vidéos (Lynda.com, JSConf, NewCircle, Google I/O, ...), la pratique, etc... Impossible de tout citer</td>
+                        <td>
+                            Formation autodidacte : Livres (en anglais), Google, StackOverflow, Comptes Github, Vidéos
+                            (Lynda.com, JSConf, NewCircle, Google I/O, ...), la pratique, etc... Impossible de tout
+                            citer
+                        </td>
                     </tr>
 
                     <tr>
@@ -174,11 +55,20 @@
 
                 <table role="grid">
                     <tr>
+                        <th>Septembre 2015</th>
+                        <td>
+                            Mon premier CDI chez <a href="https://www.anaplan.com" target="_blank">Anaplan</a>, éditeur
+                            d'une application de planification stratégique d'entreprise.
+                        </td>
+                    </tr>
+
+                    <tr>
                         <th>2013-2014</th>
                         <td>
                             <span class="block">Activités Freelance :</span>
                             <span class="block">WebMarketing => Référencement et Web Analytics</span>
-                            <span class="block">Création de sites web => <a href="<?php echo site_url('realisations'); ?>">Voir mes
+                            <span class="block">Création de sites web => <a
+                                    href="<?php echo site_url('realisations'); ?>">Voir mes
                                     réalisations</a></span>
                         </td>
                     </tr>
@@ -231,6 +121,7 @@
                     <span class="block">Salsa</span>
                     <span class="block">Séries TV</span>
                     <span class="block">Musique</span>
+                    <span class="block">Bouddhisme</span>
                 </div>
             </div>
 

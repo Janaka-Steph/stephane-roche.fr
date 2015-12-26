@@ -17,7 +17,7 @@
 
             <article class="accroche-article">
                 <h1>
-                    <a href="<?php base_url(); ?>blog/article/<?php echo $row->art_url_rw; ?>"><?php echo $row->art_title; ?></a>
+                    <a class="art_title" href="<?php base_url(); ?>blog/article/<?php echo $row->art_url_rw; ?>"><?php echo $row->art_title; ?></a>
                 </h1>
                 <!-- Formatage Date -->
                 <?php $jour = date("d", strtotime($row->art_date)); ?>

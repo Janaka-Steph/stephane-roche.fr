@@ -114,7 +114,7 @@ var ajaxrequest = function (idTrigger, idViewContainer, urlController, sendMetho
                     urlController: locationOrigin + urlController,
                     sendMethod: sendMethod
                 },
-                'titre', locationOrigin + urlController);
+                'title', locationOrigin + urlController);
         });
     });
 };
@@ -199,11 +199,10 @@ ajaxrequest(".ajaxContact", "#contact-container", "contact", "GET");
 // // Call Admin
 ajaxrequest(".ajaxAdmin", "#admin-container", "auth/index", "GET");
 
-// Call Article - Suite button
-$(document).on('click', '.suitelink', function (e) {
+// Go to Article page via "suite" button or title
+$(document).on('click', '.suitelink, .art_title', function (e) {
     e.preventDefault();
     var href_article = $(this).attr('href');
-    //console.log(href_article);
 
     $.ajax({
         url: locationOrigin + href_article,
@@ -232,5 +231,5 @@ $(document).on('click', '.suitelink', function (e) {
         idViewContainer: "article-container",
         urlController: href_article,
         sendMethod: "POST"
-    }, 'titre', locationOrigin + href_article);
+    }, 'title', locationOrigin + href_article);
 });
